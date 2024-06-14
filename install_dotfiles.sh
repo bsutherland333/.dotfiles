@@ -5,7 +5,7 @@ echo "Installing dotfiles and nvim plugins."
 export DOTFILES="$HOME/.dotfiles"
 
 ## zsh ##
-ln -sf "$DOTFILES/.zshrc" "$HOME"
+ln -sf "$DOTFILES/zsh/.zshrc" "$HOME"
 
 ## nvim ##
 mkdir -p "$HOME/.config/nvim"
