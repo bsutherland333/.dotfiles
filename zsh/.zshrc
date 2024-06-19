@@ -117,9 +117,3 @@ export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
 # For cached files
 export XDG_CACHE_HOME="$HOME/.cache"
 
-## Aliases
-
-alias sros="source /opt/ros/jazzy/setup.zsh; source $HOME/Projects/rosflight_ws/install/setup.zsh"
-alias plotjuggler="sros; ros2 run plotjuggler plotjuggler"
-alias clionros="tmux new-session -d -s clion-ros \"sros; clion; tmux kill-session -t clion-ros\""
-alias ccbuild="colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G Ninja --symlink-install"
