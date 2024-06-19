@@ -69,13 +69,9 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode fzf docker docker-compose)
+plugins=(git vi-mode fzf)
 
 ## PLUGIN CONFIGURATION
-
-# Configure docker plugin
-zstyle ':completion:*:*:docker:*' option-stacking yes
-zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 # Configure vi-mode plugin
 VI_MODE_SET_CURSOR=true
