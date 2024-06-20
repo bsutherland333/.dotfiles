@@ -17,13 +17,14 @@ else
 fi
 
 case $DISTRIBUTION in
-    ubuntu)
-        echo "Detected Ubuntu."
+    ubuntu|pop)
+        echo "Detected Ubuntu or Pop!_OS."
         sudo apt-get update
 
         # Add ppa repos
         sudo apt-get install software-properties-common -y
         sudo add-apt-repository ppa:neovim-ppa/stable -y
+        sudo add-apt-repository ppa:aos1/diff-so-fancy -y
 
         # Install apt packages
         sudo apt-get install \
@@ -35,8 +36,8 @@ case $DISTRIBUTION in
             less \
             tree \
             curl \
+            diff-so-fancy \
             -y
-            # diff-so-fancy
         ;;
     fedora)
         echo "Detected Fedora."
