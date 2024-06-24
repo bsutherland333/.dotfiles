@@ -60,9 +60,8 @@ esac
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Setup diff-so-fancy
-if command_exists "diff-so-fancy."; then
-    git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-fi
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RF"
+git config --global interactive.diffFilter "diff-so-fancy --patch"
 
 echo "Package installation complete."
 
