@@ -121,3 +121,7 @@ export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
 # For cached files
 export XDG_CACHE_HOME="$HOME/.cache"
 
+#########
+
+# Disable auto-update of zsh history
+unsetopt share_history
