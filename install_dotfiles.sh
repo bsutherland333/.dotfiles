@@ -22,4 +22,7 @@ ln -sf "$DOTFILES/nvim/autoload/plug.vim" "$HOME/.config/nvim/autoload/plug.vim"
 
 nvim --noplugin +PlugUpdate +qa
 
+## ideavim ##
+ln -sf "$DOTFILES/ideavim/.ideavimrc" "$HOME"
+
 
