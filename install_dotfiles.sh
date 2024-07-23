@@ -20,7 +20,7 @@ ln -sf "$DOTFILES/nvim/init.vim" "$HOME/.config/nvim"
 mkdir -p "$HOME/.config/nvim/autoload"
 ln -sf "$DOTFILES/nvim/autoload/plug.vim" "$HOME/.config/nvim/autoload/plug.vim"
 
-nvim --noplugin +PlugUpdate +qa
+nvim --headless --noplugin +PlugUpdate +qa
 
 ## ideavim ##
 ln -sf "$DOTFILES/ideavim/.ideavimrc" "$HOME"
