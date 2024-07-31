@@ -125,3 +125,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # Disable auto-update of zsh history
 unsetopt share_history
+
+# Set history to be written after every command, rather than on terminal close
+setopt INC_APPEND_HISTORY
