@@ -12,3 +12,6 @@ mkdir -p "$HOME/.config/vim"
 mkdir -p "$HOME/.config/vim/undo"
 ln -sf "$DOTFILES/vim/.vimrc" "$HOME"
 
+## neovim ##
+ln -sf "$DOTFILES/nvim" "$HOME/.config"
+
