@@ -1,12 +1,4 @@
-""" Neovim Configuration """
-
-" Setup plugins
-call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
-    " Undo tree
-    Plug 'simnalamburt/vim-mundo'
-    " Git
-    Plug 'airblade/vim-gitgutter'
-call plug#end()
+""" Vim Configuration """
 
 " Allow pasting from OS clipboard
 set clipboard+=unnamedplus
@@ -16,7 +8,7 @@ set noswapfile
 
 " Modify unto tree behavior
 set undofile
-set undodir=$HOME/.config/nvim/undo
+set undodir=$HOME/.config/vim/undo
 set undolevels=10000
 set undoreload=10000
 
