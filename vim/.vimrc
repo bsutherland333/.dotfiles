@@ -27,7 +27,7 @@ set scrolloff=5
 
 " Show whitespace
 set list
-set listchars=tab:>-,trail:⋅
+set listchars=tab:>-
 
 " Setup parameters for git plugins
 set updatetime=100
