@@ -1,8 +1,10 @@
 return {
+  { "NLKNguyen/papercolor-theme" },
+
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "slate",
+      colorscheme = "PaperColor",
     },
   },
 }
