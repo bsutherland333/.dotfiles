@@ -38,21 +38,19 @@ ubuntu)
     curl \
     diff-so-fancy \
     -y
-  ;;
-fedora)
-  echo "Detected Fedora."
 
-  # Install packages
-  sudo dnf install --assumeyes \
-    man-db \
-    neovim \
-    zsh \
-    fzf \
+  # Install LazyVim dependencies
+  sudo apt-get install \
     ripgrep \
-    less \
-    tree \
-    curl \
-    diff-so-fancy
+    fd-find \
+    python3-neovim \
+    python3-pip \
+    luarocks \
+    -y
+  LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+  curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+  tar xf lazygit.tar.gz lazygit
+  install lazygit /usr/local/bin
   ;;
 *)
   echo "Unsupported distribution: $DISTRIBUTION. Cannot install packages."
