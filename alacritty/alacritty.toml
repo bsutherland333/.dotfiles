@@ -9,7 +9,7 @@ decorations = "None"
 # Default colors
 [colors.primary]
 background = '#1c1c1c'
-foreground = '#808080'
+foreground = '#d0d0d0'
 
 [colors.cursor]
 text = '#1c1c1c'
