@@ -15,3 +15,6 @@ ln -sf "$DOTFILES/vim/.vimrc" "$HOME"
 ## neovim ##
 ln -sf "$DOTFILES/nvim" "$HOME/.config"
 
+## alacritty ##
+mkdir -p "$HOME/.config/alacritty"
+ln -sf "$DOTFILES/alacritty/alacritty.toml" "$HOME/.config/alacritty"
