@@ -44,10 +44,14 @@ fedora)
 
   # Install packages
   sudo dnf install --assumeyes \
+    man-db \
     neovim \
     zsh \
     fzf \
     ripgrep \
+    less \
+    tree \
+    curl \
     diff-so-fancy
   ;;
 *)
@@ -55,12 +59,5 @@ fedora)
   exit 1
   ;;
 esac
-
-# Oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# Setup diff-so-fancy
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RF"
-git config --global interactive.diffFilter "diff-so-fancy --patch"
 
 echo "Package installation complete."
