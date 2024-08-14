@@ -1,4 +1,9 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
+
+-- Set distance from edges
 vim.opt.scrolloff = 5
+
+-- Let vim use system keyboard
+vim.opt.clipboard = "unnamedplus"
