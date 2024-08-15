@@ -37,11 +37,11 @@ ubuntu)
     tree \
     curl \
     diff-so-fancy \
+    vim \
     -y
 
   # Install LazyVim dependencies
   sudo apt-get install \
-    ripgrep \
     fd-find \
     python3-neovim \
     python3-pip \
