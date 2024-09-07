@@ -42,4 +42,9 @@ git config --global color.diff.whitespace "red reverse"
 mkdir -p "$HOME/.config/diff-so-fancy"
 ln -sf "$DOTFILES/diff-so-fancy/dsf-filter" "$HOME/.config/diff-so-fancy"
 
+## qutebrowser ##
+mkdir -p "$HOME/.config/qutebrowser"
+ln -sf "$DOTFILES/qutebrowser/autoconfig.yml" "$HOME/.config/qutebrowser"
+ln -sf "$DOTFILES/qutebrowser/quickmarks" "$HOME/.config/qutebrowser"
+
 echo "Configuration complete."
