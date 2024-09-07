@@ -6,8 +6,7 @@ echo "Installing dotfiles, installing user packages, and configuring system."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -sf "$DOTFILES/zsh/.zshenv" "$HOME"
 mkdir -p "$XDG_CONFIG_HOME/zsh"
-ln -sf "$DOTFILES/zsh/.zprofile" "$XDG_CONFIG_HOME"
-ln -sf "$DOTFILES/zsh/.zshrc" "$XDG_CONFIG_HOME"
+ln -sf "$DOTFILES/zsh/.zshrc" "$XDG_CONFIG_HOME/zsh"
 
 ## vim ##
 mkdir -p "$XDG_CONFIG_HOME/vim"

@@ -1,4 +1,4 @@
-# zshrc, sourced for interactive shells after zshenv and zprofile.
+# zshrc, sourced for interactive shells after zshenv.
 # Place all interactive shell configuration here.
 
 # Path to your oh-my-zsh installation.

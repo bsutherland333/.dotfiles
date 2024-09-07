@@ -8,7 +8,7 @@ set noswapfile
 
 " Modify unto tree behavior
 set undofile
-set undodir=$HOME/.config/vim/undo
+set undodir=$XDG_CONFIG_HOME/vim/undo
 set undolevels=10000
 set undoreload=10000
 
