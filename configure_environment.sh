@@ -2,27 +2,28 @@
 
 echo "Installing dotfiles, installing user packages, and configuring system."
 
-export DOTFILES="$HOME/.dotfiles"
-
 ## zsh ##
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-ln -sf "$DOTFILES/zsh/.zshrc" "$HOME"
+ln -sf "$DOTFILES/zsh/.zshenv" "$HOME"
+mkdir -p "$XDG_CONFIG_HOME/zsh"
+ln -sf "$DOTFILES/zsh/.zprofile" "$XDG_CONFIG_HOME"
+ln -sf "$DOTFILES/zsh/.zshrc" "$XDG_CONFIG_HOME"
 
 ## vim ##
-mkdir -p "$HOME/.config/vim"
-mkdir -p "$HOME/.config/vim/undo"
+mkdir -p "$XDG_CONFIG_HOME/vim"
+mkdir -p "$XDG_CONFIG_HOME/vim/undo"
 ln -sf "$DOTFILES/vim/.vimrc" "$HOME"
 
 ## neovim ##
-ln -sf "$DOTFILES/nvim" "$HOME/.config"
+ln -sf "$DOTFILES/nvim" "$XDG_CONFIG_HOME"
 
 ## alacritty ##
-mkdir -p "$HOME/.config/alacritty"
-ln -sf "$DOTFILES/alacritty/alacritty.toml" "$HOME/.config/alacritty"
+mkdir -p "$XDG_CONFIG_HOME/alacritty"
+ln -sf "$DOTFILES/alacritty/alacritty.toml" "$XDG_CONFIG_HOME/alacritty"
 
 ## diff-so-fancy ##
 git config --global core.pager "command -v diff-so-fancy >/dev/null 2>&1 && diff-so-fancy | less --tabs=4 -RF || less"
-git config interactive.diffFilter "$HOME/.config/diff-so-fancy/dsf-filter"
+git config interactive.diffFilter "$XDG_CONFIG_HOME/diff-so-fancy/dsf-filter"
 
 git config --global color.ui true
 
@@ -39,12 +40,12 @@ git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
-mkdir -p "$HOME/.config/diff-so-fancy"
-ln -sf "$DOTFILES/diff-so-fancy/dsf-filter" "$HOME/.config/diff-so-fancy"
+mkdir -p "$XDG_CONFIG_HOME/diff-so-fancy"
+ln -sf "$DOTFILES/diff-so-fancy/dsf-filter" "$XDG_CONFIG_HOME/diff-so-fancy"
 
 ## qutebrowser ##
-mkdir -p "$HOME/.config/qutebrowser"
-ln -sf "$DOTFILES/qutebrowser/autoconfig.yml" "$HOME/.config/qutebrowser"
-ln -sf "$DOTFILES/qutebrowser/quickmarks" "$HOME/.config/qutebrowser"
+mkdir -p "$XDG_CONFIG_HOME/qutebrowser"
+ln -sf "$DOTFILES/qutebrowser/autoconfig.yml" "$XDG_CONFIG_HOME/qutebrowser"
+ln -sf "$DOTFILES/qutebrowser/quickmarks" "$XDG_CONFIG_HOME/qutebrowser"
 
 echo "Configuration complete."
