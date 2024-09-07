@@ -7,3 +7,6 @@ vim.opt.scrolloff = 5
 
 -- Let vim use system keyboard
 vim.opt.clipboard = "unnamedplus"
+
+-- Enable wrapping
+vim.opt.wrap = true

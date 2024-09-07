@@ -10,10 +10,10 @@ vim.api.nvim_create_autocmd("FocusLost", {
 })
 
 -- Use a plain text syntax for Markdown files
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'markdown',
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
   callback = function()
-    vim.cmd('setlocal filetype=text')
-  end
+    vim.cmd("setlocal filetype=text")
+  end,
 })
 
