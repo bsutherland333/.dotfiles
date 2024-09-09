@@ -52,9 +52,10 @@ ubuntu)
   curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
   tar xf lazygit.tar.gz lazygit
   install lazygit /usr/local/bin
+  sudo rm -rf lazygit.tar.gz lazygit
   ;;
 *)
-  echo "Unsupported distribution: $DISTRIBUTION. Cannot install packages."
+  echo "Unsupported distribution: $DISTRIBUTION. Install packages manually."
   exit 1
   ;;
 esac

@@ -2,10 +2,9 @@
 
 echo "Installing dotfiles, installing user packages, and configuring system."
 
-# Copied over from zshenv
-export DOTFILES="$HOME/.dotfiles"
-export XDG_CONFIG_HOME="$HOME/.config"
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+# location of repository
+DOTFILES="$HOME/.dotfiles"
+source "$DOTFILES/zsh/.zshenv"
 
 ## zsh ##
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
