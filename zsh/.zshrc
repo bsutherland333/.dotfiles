@@ -2,7 +2,7 @@
 # Place all interactive shell configuration here.
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$ZDOTDIR/ohmyzsh"
 
 # Set name of the theme to load
 ZSH_THEME="af-magic"
