@@ -6,12 +6,15 @@
 
 config_version: 2
 settings:
+  content.geolocation:
+    https://duckduckgo.com: true
   content.javascript.clipboard:
     global: access
   content.notifications.enabled:
     https://app.slack.com: true
     https://calendar.google.com: true
     https://mail.proton.me: true
+    https://messages.google.com: true
     https://teams.microsoft.com: true
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: false
