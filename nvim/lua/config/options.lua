@@ -10,3 +10,7 @@ vim.opt.clipboard = "unnamedplus"
 
 -- Enable wrapping
 vim.opt.wrap = true
+
+-- Disable swap file
+vim.opt.swapfile = false
+
