@@ -1,9 +1,13 @@
 # Docker workspaces
-alias dcup-openvins='cd ~/Repos/docker_project_files/open_vins_ws && dcup -d'
-alias dcdn-openvins='cd ~/Repos/docker_project_files/open_vins_ws && dcdn'
-alias dce-openvins='cd ~/Repos/docker_project_files/open_vins_ws && dce open_vins zsh'
+alias cd-openvins='cd ~/Repos/docker_project_files/open_vins_ws'
+alias dcb-openvins='cd-openvins && dcb'
+alias dcup-openvins='cd-openvins && dcup -d'
+alias dcdn-openvins='cd-openvins && dcdn'
+alias dce-openvins='cd-openvins && dce open_vins zsh'
 
-alias dcup-rosflight='cd ~/Repos/docker_project_files/rosflight_ws && dcup -d'
-alias dcdn-rosflight='cd ~/Repos/docker_project_files/rosflight_ws && dcdn'
-alias dce-rosflight='cd ~/Repos/docker_project_files/rosflight_ws && dce rosflight zsh'
+alias cd-rosflight='cd ~/Repos/docker_project_files/rosflight_ws'
+alias dcb-rosflight='cd-rosflight && dcb'
+alias dcup-rosflight='cd-rosflight && dcup -d'
+alias dcdn-rosflight='cd-rosflight && dcdn'
+alias dce-rosflight='cd-rosflight && dce rosflight zsh'
 
