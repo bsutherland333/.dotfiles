@@ -82,3 +82,6 @@ unsetopt share_history
 
 # Set history to be written after every command, rather than on terminal close
 setopt INC_APPEND_HISTORY
+
+# Source aliases file
+source $ZDOTDIR/aliases

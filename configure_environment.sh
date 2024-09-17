@@ -11,6 +11,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ln -sf "$DOTFILES/zsh/.zshenv" "$HOME"
 mkdir -p "$XDG_CONFIG_HOME/zsh"
 ln -sf "$DOTFILES/zsh/.zshrc" "$XDG_CONFIG_HOME/zsh"
+ln -sf "$DOTFILES/zsh/aliases" "$XDG_CONFIG_HOME/zsh"
 
 ## vim ##
 mkdir -p "$XDG_CONFIG_HOME/vim"
