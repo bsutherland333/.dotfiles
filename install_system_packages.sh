@@ -35,7 +35,6 @@ ubuntu)
     tree \
     curl \
     diff-so-fancy \
-    vim \
     -y
 
   # Install neovim from appimage

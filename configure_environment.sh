@@ -13,11 +13,6 @@ mkdir -p "$XDG_CONFIG_HOME/zsh"
 ln -sf "$DOTFILES/zsh/.zshrc" "$XDG_CONFIG_HOME/zsh"
 ln -sf "$DOTFILES/zsh/aliases" "$XDG_CONFIG_HOME/zsh"
 
-## vim ##
-mkdir -p "$XDG_CONFIG_HOME/vim"
-mkdir -p "$XDG_CONFIG_HOME/vim/undo"
-ln -sf "$DOTFILES/vim/.vimrc" "$HOME"
-
 ## neovim ##
 ln -sf "$DOTFILES/nvim" "$XDG_CONFIG_HOME"
 
