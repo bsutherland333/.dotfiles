@@ -23,13 +23,11 @@ ubuntu)
 
   # Add ppa repos
   sudo apt-get install software-properties-common -y
-  sudo add-apt-repository ppa:neovim-ppa/unstable -y
   sudo add-apt-repository ppa:aos1/diff-so-fancy -y
 
   # Install apt packages
   sudo apt-get install \
     man-db \
-    neovim \
     zsh \
     fzf \
     ripgrep \
@@ -39,6 +37,15 @@ ubuntu)
     diff-so-fancy \
     vim \
     -y
+
+  # Install neovim from appimage
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+  chmod u+x nvim.appimage
+  ./nvim.appimage --appimage-extract
+  ./squashfs-root/AppRun --version
+  sudo mv squashfs-root /
+  sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+  rm nvim.appimage
 
   # Install LazyVim dependencies
   sudo apt-get install \
