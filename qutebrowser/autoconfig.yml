@@ -13,6 +13,7 @@ settings:
   content.notifications.enabled:
     https://app.slack.com: true
     https://calendar.google.com: true
+    https://discuss.rosflight.org: true
     https://mail.proton.me: true
     https://messages.google.com: true
     https://teams.microsoft.com: true
