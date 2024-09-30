@@ -37,15 +37,6 @@ ubuntu)
     diff-so-fancy \
     -y
 
-  # Install neovim from appimage
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-  chmod u+x nvim.appimage
-  ./nvim.appimage --appimage-extract
-  ./squashfs-root/AppRun --version
-  sudo mv squashfs-root /
-  sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
-  rm nvim.appimage
-
   # Install LazyVim dependencies
   sudo apt-get install \
     fd-find \
@@ -59,6 +50,17 @@ ubuntu)
   tar xf lazygit.tar.gz lazygit
   install lazygit /usr/local/bin
   sudo rm -rf lazygit.tar.gz lazygit
+
+  # Install neovim from appimage
+  sudo apt purge neovim -y
+  sudo apt autoremove -y
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+  chmod u+x nvim.appimage
+  ./nvim.appimage --appimage-extract
+  ./squashfs-root/AppRun --version
+  sudo mv squashfs-root /
+  sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+  rm nvim.appimage
   ;;
 *)
   echo "Unsupported distribution: $DISTRIBUTION. Install packages manually."
