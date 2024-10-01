@@ -61,6 +61,9 @@ ubuntu)
   sudo mv squashfs-root /
   sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
   rm nvim.appimage
+
+  # Install packages for distrobox workflow
+  sudo apt install wl-clipboard -y
   ;;
 *)
   echo "Unsupported distribution: $DISTRIBUTION. Install packages manually."
