@@ -35,6 +35,7 @@ ubuntu)
     tree \
     curl \
     diff-so-fancy \
+    vim \
     -y
 
   # Install LazyVim dependencies
@@ -48,7 +49,7 @@ ubuntu)
   LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
   curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
   tar xf lazygit.tar.gz lazygit
-  install lazygit /usr/local/bin
+  sudo install lazygit /usr/local/bin
   sudo rm -rf lazygit.tar.gz lazygit
 
   # Install neovim from appimage
@@ -56,11 +57,17 @@ ubuntu)
   sudo apt autoremove -y
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
   chmod u+x nvim.appimage
-  ./nvim.appimage --appimage-extract
-  ./squashfs-root/AppRun --version
+  sudo ./nvim.appimage --appimage-extract
   sudo mv squashfs-root /
   sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
   rm nvim.appimage
+  sudo rm -rf squashfs-root
+
+  # Install nvm and nodejs
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+  export NVM_DIR="$HOME/.config/nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  nvm install 20
 
   # Install packages for distrobox workflow
   sudo apt install wl-clipboard -y
