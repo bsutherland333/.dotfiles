@@ -6,14 +6,23 @@
 
 config_version: 2
 settings:
+  content.desktop_capture:
+    https://dod.teams.microsoft.us: true
   content.geolocation:
     https://duckduckgo.com: true
   content.javascript.clipboard:
     global: access
+  content.media.audio_capture:
+    https://dod.teams.microsoft.us: true
+  content.media.audio_video_capture:
+    https://dod.teams.microsoft.us: true
+  content.media.video_capture:
+    https://dod.teams.microsoft.us: true
   content.notifications.enabled:
     https://app.slack.com: true
     https://calendar.google.com: true
     https://discuss.rosflight.org: true
+    https://dod.teams.microsoft.us: true
     https://mail.proton.me: true
     https://messages.google.com: true
     https://teams.microsoft.com: true
