@@ -53,6 +53,7 @@ ubuntu)
   sudo rm -rf lazygit.tar.gz lazygit
 
   # Install neovim from appimage
+  # Version in apt repositories is usually too old
   sudo apt purge neovim -y
   sudo apt autoremove -y
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
@@ -63,14 +64,15 @@ ubuntu)
   rm nvim.appimage
   sudo rm -rf squashfs-root
 
-  # Install nvm and nodejs
+  # Install nvm and nodejs (for github copilot)
+  # Version in apt repositories is usually too old
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
   export NVM_DIR="$HOME/.config/nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
   nvm install 20
 
   # Install packages for distrobox workflow
-  sudo apt install wl-clipboard -y
+  sudo apt install wl-clipboard -y  # Enables copying/pasting from clipboard between host and guest
   ;;
 *)
   echo "Unsupported distribution: $DISTRIBUTION. Install packages manually."
