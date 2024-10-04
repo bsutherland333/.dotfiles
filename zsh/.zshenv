@@ -15,6 +15,3 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # Alternate zsh dotfile location
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-
-# Dotfile repo directory
-export DOTFILES="$HOME/.dotfiles"
