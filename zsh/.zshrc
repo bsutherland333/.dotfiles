@@ -57,7 +57,7 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode fzf docker docker-compose)
+plugins=(git vi-mode fzf)
 
 # Configure docker plugin
 zstyle ':completion:*:*:docker:*' option-stacking yes
@@ -85,3 +85,15 @@ setopt INC_APPEND_HISTORY
 
 # Source aliases file
 source $ZDOTDIR/aliases
+
+# Source distrobox environment configuration files
+if [ -n "$DISTROBOX_ENV" ]; then
+  case $DISTROBOX_ENV in
+    "open_vins")
+      source $XDG_CONFIG_HOME/distrobox/open_vins.zsh
+      ;;
+    *)
+      echo "Unknown distrobox environment: $DISTROBOX_ENV"
+      ;;
+  esac
+fi
