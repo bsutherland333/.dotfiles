@@ -51,4 +51,7 @@ ln -sf "$DOTFILES/qutebrowser/quickmarks" "$XDG_CONFIG_HOME/qutebrowser"
 mkdir -p "$XDG_CONFIG_HOME/zathura"
 ln -sf "$DOTFILES/zathura/zathurarc" "$XDG_CONFIG_HOME/zathura"
 
+## distrobox ##
+ln -sf "$DOTFILES/distrobox" "$XDG_CONFIG_HOME"
+
 echo "Configuration complete."
