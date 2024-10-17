@@ -16,10 +16,6 @@ ln -sf "$DOTFILES/zsh/aliases" "$XDG_CONFIG_HOME/zsh"
 ## neovim ##
 ln -sf "$DOTFILES/nvim" "$XDG_CONFIG_HOME"
 
-## alacritty ##
-mkdir -p "$XDG_CONFIG_HOME/alacritty"
-ln -sf "$DOTFILES/alacritty/alacritty.toml" "$XDG_CONFIG_HOME/alacritty"
-
 ## diff-so-fancy ##
 git config --global core.pager "command -v diff-so-fancy >/dev/null 2>&1 && diff-so-fancy | less --tabs=4 -RF || less"
 git config interactive.diffFilter "$XDG_CONFIG_HOME/diff-so-fancy/dsf-filter"
