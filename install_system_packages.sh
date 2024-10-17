@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Function to check it a command exists
-command_exists() {
-  command -v "$1" >/dev/null 2>&1
-}
-
 # Detect current distribution
 if [ -f /etc/os-release ]; then
   . /etc/os-release
