@@ -38,6 +38,8 @@ ubuntu)
     fd-find \
     python3-neovim \
     python3-pip \
+    python3-venv \
+    cargo \
     luarocks \
     fish \
     -y
