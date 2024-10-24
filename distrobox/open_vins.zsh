@@ -6,6 +6,13 @@ else
   echo "nvm not installed, skipping"
 fi
 
+# Source rustup installation
+if [ -s "$HOME/.cargo/env" ]; then
+  source "$HOME/.cargo/env"
+else
+  echo "rustup not installed, skipping"
+fi
+
 # Source ROS files if they exist
 if [ -e /opt/ros/galactic/setup.zsh ]; then
   source /opt/ros/galactic/setup.zsh

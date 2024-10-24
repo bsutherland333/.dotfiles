@@ -39,7 +39,6 @@ ubuntu)
     python3-neovim \
     python3-pip \
     python3-venv \
-    cargo \
     luarocks \
     fish \
     -y
@@ -48,6 +47,10 @@ ubuntu)
   tar xf lazygit.tar.gz lazygit
   sudo install lazygit /usr/local/bin
   sudo rm -rf lazygit.tar.gz lazygit
+
+  # Install rust via rustup
+  # Version in apt repositories is usually too old
+  curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
 
   # Install neovim from appimage
   # Version in apt repositories is usually too old
