@@ -2,14 +2,29 @@
 
 ## Define XDG locations
 
-# For dotfiles
+# Currently just uses defaults, be cautious when departing from defaults as
+# unexpected things may break.
+
+# User specific configuration files
 export XDG_CONFIG_HOME="$HOME/.config"
 
-# For specific data
-export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
-
-# For cached files
+# User specific non-essential data files
 export XDG_CACHE_HOME="$HOME/.cache"
+
+# User specific data files
+export XDG_DATA_HOME="$HOME/.local/share"
+
+# User specific state files
+export XDG_STATE_HOME="$HOME/.local/state"
+
+# User specific runtime files
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+
+# System wide configuration files
+export XDG_CONFIG_DIRS="/etc/xdg"
+
+# System wide data files
+export XDG_DATA_DIRS="/usr/local/share:/usr/share"
 
 ## Misc definitions
 
